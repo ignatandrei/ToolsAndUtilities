@@ -1,0 +1,6 @@
+{
+  "name": "Tools And Utilities",
+  "tagline": "tools and utilities in .NET ",
+  "body": "#For Visual Studio 2015 :\r\n1.  Cryptography  : Code at [https://github.com/ignatandrei/ToolsAndUtilities/tree/master/VS2015/Crypt] Video at [https://www.youtube.com/watch?v=kKq0DjvFpok]\r\n\r\n2.  Versioning: Code at [https://github.com/ignatandrei/ToolsAndUtilities/tree/master/VS2015/Versioning] Video at [https://www.youtube.com/watch?v=45WhlpwIOW8]\r\n\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
