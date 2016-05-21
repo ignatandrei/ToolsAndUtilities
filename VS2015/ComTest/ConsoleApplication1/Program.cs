@@ -18,8 +18,9 @@ namespace ConsoleApplication1
                 File.Delete(fileName);
             var x = new ExcelTest();
            
-            x.CreateNew(fileName);
+            //x.CreateNew(fileName);
             //x.CreateCorrect(fileName);
+            x.CreateNewDisposable(fileName);
             x = null;
             Console.WriteLine("See if excel it is in task manager");
             Console.ReadKey();

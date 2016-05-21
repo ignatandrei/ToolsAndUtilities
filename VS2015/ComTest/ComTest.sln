@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComTest", "ComTest\ComTest.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleCom", "ConsoleApplication1\ConsoleCom.csproj", "{0CA2BED5-9E3C-4F82-9FEA-91059C5DD1A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComDoneRight", "ComDoneRight\ComDoneRight.csproj", "{D42A6B8B-232A-4E46-8CB4-7621299C08E5}"
+EndProject
+Project("{E09DD79A-4488-4AB9-8D3F-A7EEE78BF432}") = "ComDisposable", "ComDisposable\ComDisposable.nuproj", "{6EE2173E-8246-4D16-92F4-45ED96A88DB8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{0CA2BED5-9E3C-4F82-9FEA-91059C5DD1A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CA2BED5-9E3C-4F82-9FEA-91059C5DD1A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CA2BED5-9E3C-4F82-9FEA-91059C5DD1A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D42A6B8B-232A-4E46-8CB4-7621299C08E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D42A6B8B-232A-4E46-8CB4-7621299C08E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D42A6B8B-232A-4E46-8CB4-7621299C08E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D42A6B8B-232A-4E46-8CB4-7621299C08E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EE2173E-8246-4D16-92F4-45ED96A88DB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EE2173E-8246-4D16-92F4-45ED96A88DB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EE2173E-8246-4D16-92F4-45ED96A88DB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EE2173E-8246-4D16-92F4-45ED96A88DB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
