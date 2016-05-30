@@ -9,6 +9,11 @@ namespace ILMergeDOS
 {
     class Program
     {
+        /// <summary>
+        /// References:
+        /// http://research.microsoft.com/en-us/people/mbarnett/ilmerge.aspx
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             var m = new MyClass();
