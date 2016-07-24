@@ -234,3 +234,5 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+/VS2015/ComTest/ComTest/packages.config
+/VS2015/ComTest/ComTest/releaseComObject.txt

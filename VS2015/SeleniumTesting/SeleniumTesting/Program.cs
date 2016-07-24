@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,17 +20,20 @@ namespace SeleniumTesting
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            IWebDriver w=new ChromeDriver();
+            IWebDriver driver=new ChromeDriver();
             
-            var nav=w.Navigate();
+            var nav= driver.Navigate();
             nav.GoToUrl("http://msprogrammer.serviciipeweb.ro/about/");
-            var source = w.PageSource;
-            var str = w.Url;
+            var source = driver.PageSource;
+            var str = driver.Url;
             Console.WriteLine(str);
-            w.FindElement(By.ClassName("page-item-1892")).Click();
-            str = w.Url;
+            driver.FindElement(By.ClassName("page-item-1892")).Click();
+            Screenshot ss = ((ITakesScreenshot)driver).GetScreenshot();
+            ss.SaveAsFile("a.jpg",ImageFormat.Jpeg);
+            Process.Start("a.jpg");
+            str = driver.Url;
             Console.WriteLine(str);
-
+            driver.Quit();
         }
     }
 }
