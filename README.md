@@ -2,7 +2,7 @@
 tools and utilities in .NET 
 
 Videos about features at
-<Table border="1">
+<Table border="1" style='width:90%'>
 
 <tr>
    <th>Id</th>
