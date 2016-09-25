@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Visual Studio Extensions - an introduction</title>
+
+		<meta name="description" content="Visual Studio Extensions - an introduction">
+		<meta name="author" content="Andrei Ignat">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="reveal.js-master/css/reveal.css">
+		<link rel="stylesheet" href="reveal.js-master/css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="reveal.js-master/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js-master/css/print/pdf.css' : 'reveal.js-master/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="reveal.js-master/lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<script src="res/jquery-3.0.0-beta1.min.js"></script>
+		<style>
+			.reveal pre code {
+				overflow-x: hidden;
+			}
+			#codeClassic {
+				box-shadow:none;
+			}
+			#codeClassic code {
+				transform-origin: 50% 70%;
+				transform: perspective(300px) rotateX(15deg);
+				overflow:hidden;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h2>Andrei <span id="spnPersona"></span> Ignat</h2>
+					<h3 id="hPersona" class="fragment"> Blog : http://msprogrammer.serviciipeweb.ro/</h3>
+					<div class="fragment" id="divBlog">
+						<iframe id="ifrBlog" style="width:1000px; height:480px" src="http://msprogrammer.serviciipeweb.ro/"></iframe>
+						<canvas id="cnvBlog"></canvas>
+					</div>
+				</section>
+
+				<section>
+					<h2>What is VS Extension</h2>
+					<p>
+						Plugin to Visual Studio
+						<ul><li>https://msdn.microsoft.com/en-us/library/envdte.dte.aspx</li>
+						<li>http://www.visualstudioextensibility.com/articles/add-ins/<li>
+						</ul>
+					</p>
+				</section>
+
+				<section>
+					<h2>Sample Extensions</h2>
+					<p>
+					<ul>
+					<li>GhostDoc</li>
+					<li>Learn the shortcut</li>
+					<li>NUGET</li>
+					<li>Productivity power tools</li>
+					<li>Sql Server Compact/SQLIte toolbox</li>
+					
+						</ul>
+					</p>
+				</section>
+
+				<section>
+					<h2>Demo</h2>
+					
+				</section>
+				<section>
+					<h2>Questions?</h2>
+					Andrei Ignat,http://msprogrammer.serviciipeweb.ro/
+				</section>
+				
+			</div>
+
+		</div>
+
+		<script src="reveal.js-master/lib/js/head.min.js"></script>
+		<script src="reveal.js-master/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: /*Reveal.getQueryHash().transition || */'default', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'reveal.js-master/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal.js-master/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js-master/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js-master/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal.js-master/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'reveal.js-master/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+			function slidePersona() {
+				return;
+				var spn = $('#spnPersona');
+				var text='"http://msprogrammer.serviciipeweb.ro/"';
+				var i=0;
+				var interval=setInterval(function() {
+					i++;
+					var left=parseInt(i/2);
+					var right=i-left;
+					spn.text(text.substr(0,left)+text.substr(-right));
+					if (i>=text.length) clearInterval(interval);
+				},100);
+			};
+
+			function drawEllipse(canvas, centerX, centerY, width, height) {
+	
+			  var context=canvas[0].getContext("2d");
+			  context.beginPath();
+  
+			  context.moveTo(centerX, centerY - height/2); // A1
+  
+			  context.bezierCurveTo(
+			    centerX + width/2, centerY - height/2, // C1
+			    centerX + width/2, centerY + height/2, // C2
+			    centerX, centerY + height/2); // A2
+
+			  context.bezierCurveTo(
+			    centerX - width/2, centerY + height/2, // C3
+			    centerX - width/2, centerY - height/2, // C4
+			    centerX, centerY - height/2); // A1
+ 
+			  //context.fillStyle = "red";
+			  //context.fill();
+              context.lineWidth=4;
+			  context.strokeStyle='red';
+			  context.stroke();
+			  context.closePath();	
+			}
+
+			function slideBlog() {
+				ifr=$('#ifrBlog');
+				var ofs=ifr.offset();
+				var canvas=$('#cnvBlog').css({
+					position:'absolute',
+					zIndex:100000,
+					width:250,
+					height:100,
+					top:370,
+					left:650,
+					background:'transparent'
+				});
+				setTimeout(function() {
+					drawEllipse(canvas, 125,50, 250, 100);
+				},5000);
+			};
+
+			Reveal.addEventListener('fragmentshown',function(ev) {
+				switch(ev.fragment.id) {
+					case 'hPersona': slidePersona(); break;
+					case 'divBlog': slideBlog(); break;
+					case 'imgLinq': $('#imgLinq').show(); break;
+					case 'spanLinq': $('#imgLinq').hide(); break;
+				}
+			});
+
+			function startVideo(id) {
+				$('#'+id)[0].contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}','*')
+			}
+			function stopVideo(id) {
+				$('#'+id)[0].contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}','*')
+			}
+
+			var swinterval;
+
+			Reveal.addEventListener('slidechanged',function(ev) {
+				if (!Reveal.isLastSlide()) {
+					stopVideo('ytSpaceballs');
+					if (swinterval) clearInterval(swinterval);
+					return;
+				}
+				startVideo('ytSpaceballs');
+				var code=$('code','#codeClassic');
+				var height=code[0].scrollHeight-code.height();
+				var duration=103000;
+				var scroll=0;
+				var start=+new Date();
+				swinterval = setInterval(function() {
+					code[0].scrollTop=scroll;
+					scroll=(+new Date()-start)/duration*height;
+					if (scroll>height) clearInterval(swinterval);
+				},100);
+			})
+		</script>
+
+	</body>
+</html>
