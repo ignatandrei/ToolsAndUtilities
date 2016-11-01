@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CovarContraVarObjects", "CovarContraVarObjects\CovarContraVarObjects.csproj", "{1810383D-4B8C-4A0D-87CB-2D24738D3FED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CovarianceContravarianceConsole", "CovarianceContravarianceConsole\CovarianceContravarianceConsole.csproj", "{E2F60A29-63F6-48AF-B96E-19C60DDFDBCB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1810383D-4B8C-4A0D-87CB-2D24738D3FED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1810383D-4B8C-4A0D-87CB-2D24738D3FED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1810383D-4B8C-4A0D-87CB-2D24738D3FED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1810383D-4B8C-4A0D-87CB-2D24738D3FED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2F60A29-63F6-48AF-B96E-19C60DDFDBCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2F60A29-63F6-48AF-B96E-19C60DDFDBCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2F60A29-63F6-48AF-B96E-19C60DDFDBCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2F60A29-63F6-48AF-B96E-19C60DDFDBCB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
